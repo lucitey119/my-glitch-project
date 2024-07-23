@@ -1,8 +1,9 @@
 name: Run Telegram Script
 
 on:
+  push:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/10 * * * *'  # Run every 10 minutes
 
 jobs:
   run-script:
@@ -16,3 +17,4 @@ jobs:
       run: |
         chmod +x start_telegram_service.sh
         ./start_telegram_service.sh
+
